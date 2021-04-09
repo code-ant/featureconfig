@@ -14,6 +14,6 @@ public class TestController {
     @RequestMapping("/hello")
     public String Hello(HttpServletRequest request, @RequestParam(value = "name", required = false, defaultValue = "wangpengtai") String name) {
         request.setAttribute("name", name);
-        return "hello";
+        return "/hello";
     }
 }

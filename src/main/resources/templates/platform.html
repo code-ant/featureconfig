@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test My Thymeleaf</title>
+</head>
+<body>
+<!--/*@thymesVar id="name" type=""*/-->
+<p th:text="'hello, wangpengtai!'"></p>
+
+<table>
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>平台名称</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+
+    <tr th:each="platform:${platforms}">
+        <td th:text="${platform.id}"></td>
+        <td th:text="${platform.platformName}"></td>
+        <td>
+            <button type="button">修改</button>
+            <button type="button">删除</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
